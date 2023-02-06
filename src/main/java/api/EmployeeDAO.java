@@ -12,4 +12,6 @@ public interface EmployeeDAO {
     List<Employee> getAll();
     void changeCityById(int employeeId, int cityId);
     void removeById(int id);
+    //Забыл создать отдельную ветку, так что вот)))
+
 }

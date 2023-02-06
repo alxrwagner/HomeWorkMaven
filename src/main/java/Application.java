@@ -7,6 +7,8 @@ import java.sql.*;
 public class Application {
 
     public static void main(String[] args) throws SQLException {
+        //Забыл создать отдельную ветку, так что вот)))
+
         String user = "postgres";
         String password = "0000";
         String url = "jdbc:postgresql://localhost:5432/skypro";
