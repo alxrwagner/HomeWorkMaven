@@ -12,7 +12,7 @@ public class Application {
 
         employeeDAO.getAll().forEach(System.out::println);
         employeeDAO.create(emp1);
-        employeeDAO.removeById(emp1);
+        employeeDAO.removeById(employeeDAO.getById(12));
         employeeDAO.changeById(emp1);
         System.out.println(employeeDAO.getById(4));
     }
