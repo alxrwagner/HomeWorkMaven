@@ -37,5 +37,4 @@ public class City {
         return "ID: " + cityId +
                 ", Название: " + cityName;
     }
-    //Забыл создать отдельную ветку, так что вот)))
 }
