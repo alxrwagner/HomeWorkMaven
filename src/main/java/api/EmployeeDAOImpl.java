@@ -14,12 +14,6 @@ import java.util.List;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 
-//    private Connection connection;
-//
-//    public EmployeeDAOImpl(Connection connection) {
-//        this.connection = connection;
-//    }
-
     @Override
     public void create(Employee employee) {
         try(Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()){
