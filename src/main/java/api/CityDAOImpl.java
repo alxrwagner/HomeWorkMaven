@@ -1,5 +1,6 @@
 package api;
 
+import config.HibernateSessionFactoryUtil;
 import model.City;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

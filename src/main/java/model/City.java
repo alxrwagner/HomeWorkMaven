@@ -15,7 +15,7 @@ public class City {
     @Column(name = "city_name")
     private  String cityName;
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
-    List<Employee> employees;
+    private List<Employee> employees;
 
     public City() {
     }
