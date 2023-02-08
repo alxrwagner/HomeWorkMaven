@@ -10,6 +10,4 @@ public interface EmployeeDAO {
     List<Employee> getAll();
     void changeById(Employee employee);
     void removeById(Employee employee);
-    //Забыл создать отдельную ветку, так что вот)))
-
 }

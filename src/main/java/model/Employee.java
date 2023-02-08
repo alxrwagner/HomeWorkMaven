@@ -3,6 +3,8 @@ package model;
 import javax.persistence.*;
 import java.util.Objects;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Table(name = "employee")
 public class Employee {
@@ -19,26 +21,41 @@ public class Employee {
     private String gender;
     @Column(name = "age")
     private int age;
-    @Column(name = "city_id")
-    private int city;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "city_id")
+    private City city;
 
     public Employee() {
     }
 
-    public Employee(int id, String firstName, String lastName, String gender, int age, int city) {
-        this.id = id;
+    public Employee(String firstName, String lastName, String gender, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.age = age;
-        this.city = city;
     }
 
-    public Employee(String firstName, String lastName, String gender, int age, int city) {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public void setAge(int age) {
         this.age = age;
+    }
+
+    public void setCity(City city) {
         this.city = city;
     }
 
@@ -62,7 +79,7 @@ public class Employee {
         return age;
     }
 
-    public int getCity() {
+    public City getCity() {
         return city;
     }
 
